@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela IMC</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Tabela calculadora de IMC</h1>
+        <p>Vamos calcular o seu IMC?<br>Para isso, preencha os campos abaixo com as informações solicitadas.</p>
+
+        <div class="layout">
+            <div class="table-panel">
+                <form action="/" id="form" method="get">
+                    <label for="peso">Peso</label>
+                    <input type="text" id="peso" name="peso" inputmode="decimal" placeholder="0,00" pattern="[0-9]+([,\.][0-9]+)?">
+
+                    <label for="altura">Altura</label>
+                    <input type="text" id="altura" name="altura" inputmode="decimal" placeholder="0,00" pattern="[0-9]+([,\.][0-9]+)?">
+                    <span id="erro-altura" class="erro-campo hidden"></span>
+
+                    <button type="submit">Calcular</button>
+                </form>
+            </div>
+
+            <section class="resultado-panel hidden" id="resultado-panel">
+                <h2>Resultado</h2>
+                <div id="resultado"></div>
+                <h3>Sugestão</h3>
+                <div id="sugestao"></div>
+            </section>
+        </div>
+    </section>
+    <script src="../script.js"></script>
+</body>
+</html>
